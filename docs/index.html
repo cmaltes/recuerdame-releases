@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recuérdame · No es cuándo, es cada cuánto</title>
+  <meta name="description" content="Recuérdame es una app de recordatorios para las cosas que se repiten sin fecha fija: regar las plantas, cambiar el filtro, llamar a la abuela. Marca que lo has hecho y la cuenta vuelve a empezar.">
+  <meta name="theme-color" content="#0d9488">
+  <meta property="og:title" content="Recuérdame · No es cuándo, es cada cuánto">
+  <meta property="og:description" content="Recordatorios para lo que se repite sin fecha fija. Lo haces, y la cuenta vuelve a empezar.">
+  <meta property="og:image" content="icon-512.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <img src="logo-mark.svg" alt="" width="36" height="36">
+      <span>Recuérdame</span>
+    </a>
+    <nav>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#funciones">Funciones</a>
+      <a class="button button-small" href="#descargar">Descargar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Recordatorios sin calendario</p>
+        <h1>No es <em>cuándo</em>.<br>Es <strong>cada cuánto</strong>.</h1>
+        <p class="lead">
+          Hay cosas que no tienen fecha, pero sí ritmo: regar las plantas, cambiar el filtro del agua,
+          revisar las ruedas, llamar a la abuela. Dile a Recuérdame cada cuánto las haces y te avisará
+          cuando vuelva a tocar.
+        </p>
+        <div class="cta">
+          <a class="button" href="#descargar">
+            <img src="logo-glyph.svg" alt="" width="22" height="22" class="invert">
+            Descargar para Android
+          </a>
+          <span class="muted">Gratis · Sin anuncios · Android 7.0 o superior</span>
+        </div>
+      </div>
+
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <div class="app-bar"><span class="burger"></span>Recordatorios</div>
+          <div class="card" style="--c:#16a34a">
+            <span class="bubble">🪴</span>
+            <div><b>Regar las plantas</b><small>Hoy, 19:00 · en 2 h</small><small class="tag">↻ Cada 3 días · 📍 Al llegar a Casa</small></div>
+          </div>
+          <div class="card" style="--c:#2563eb">
+            <span class="bubble">🚗</span>
+            <div><b>Presión de las ruedas</b><small>12 nov, 10:00 · en 6 semanas</small><small class="tag">↻ Cada 2 meses</small></div>
+          </div>
+          <div class="card" style="--c:#7c3aed">
+            <span class="bubble">👵</span>
+            <div><b>Llamar a la abuela</b><small>Domingo, 12:00 · en 4 días</small><small class="tag">↻ Cada semana · 👥 Compartido</small></div>
+          </div>
+          <div class="card" style="--c:#0d9488">
+            <span class="bubble">💧</span>
+            <div><b>Filtro del agua</b><small>3 mar, 09:00 · en 5 meses</small><small class="tag">↻ Cada 6 meses</small></div>
+          </div>
+          <span class="fab">+</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare">
+      <div class="compare-card calendar">
+        <p class="label">Un calendario dice</p>
+        <p class="quote">«El día 1 de cada mes.»</p>
+        <p class="muted">Aunque lo hicieras ayer. Aunque lleves dos semanas de retraso.</p>
+      </div>
+      <div class="compare-card interval">
+        <p class="label">Recuérdame dice</p>
+        <p class="quote">«30 días después de la última vez.»</p>
+        <p class="muted">Cuando lo marcas como hecho, la cuenta vuelve a empezar desde ese momento. Si lo pospones, la siguiente vez también se retrasa.</p>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="steps">
+      <h2>Cómo funciona</h2>
+      <ol>
+        <li>
+          <span class="step-number">1</span>
+          <h3>Dile cada cuánto</h3>
+          <p>Cada 3 días, cada 2 semanas, cada 6 meses… en minutos, horas, días, semanas, meses o años.</p>
+        </li>
+        <li>
+          <span class="step-number">2</span>
+          <h3>Te avisa cuando toca</h3>
+          <p>Una notificación con <b>Hecho</b> y <b>Posponer</b>. O, si prefieres, cuando llegues a casa o al trabajo.</p>
+        </li>
+        <li>
+          <span class="step-number">3</span>
+          <h3>Lo haces, y vuelta a empezar</h3>
+          <p>Marcas que lo has hecho y el intervalo se reinicia desde ese momento. Sin fechas que se acumulan ni avisos atrasados.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="examples">
+      <h2>¿Cada cuánto…?</h2>
+      <ul class="chips">
+        <li style="--c:#16a34a">🪴 regar los cactus <b>cada 2 semanas</b></li>
+        <li style="--c:#0891b2">💧 cambiar el filtro <b>cada 6 meses</b></li>
+        <li style="--c:#ea580c">🐶 desparasitar al perro <b>cada 3 meses</b></li>
+        <li style="--c:#7c3aed">📞 llamar a la abuela <b>cada semana</b></li>
+        <li style="--c:#dc2626">🦷 cambiar el cepillo <b>cada 3 meses</b></li>
+        <li style="--c:#2563eb">🚗 revisar las ruedas <b>cada 2 meses</b></li>
+        <li style="--c:#0d9488">🛏️ cambiar las sábanas <b>cada 2 semanas</b></li>
+        <li style="--c:#ca8a04">🔥 revisar la caldera <b>cada año</b></li>
+        <li style="--c:#db2777">🎁 felicitar a tu suegra <b>antes de que sea tarde</b></li>
+      </ul>
+    </section>
+
+    <section id="funciones" class="features">
+      <h2>Todo lo que necesitas, nada más</h2>
+      <div class="grid">
+        <article>
+          <span class="icon">📍</span>
+          <h3>Al llegar a casa</h3>
+          <p>Vincula un recordatorio a un lugar y te avisará al llegar, si ya toca. Detecta la wifi de casa o del trabajo, así que apenas gasta batería.</p>
+        </article>
+        <article>
+          <span class="icon">👥</span>
+          <h3>Tareas compartidas</h3>
+          <p>Invita a tu pareja o a tu familia por correo. Cualquiera puede marcarlo como hecho y la cuenta se reinicia para todos.</p>
+        </article>
+        <article>
+          <span class="icon">🎨</span>
+          <h3>Categorías con color</h3>
+          <p>Hogar, coche, salud, plantas, mascotas… con su icono y su color, en la lista y en las notificaciones.</p>
+        </article>
+        <article>
+          <span class="icon">📷</span>
+          <h3>Foto y ubicación</h3>
+          <p>Adjunta una foto del filtro que hay que comprar o la dirección del taller. Las fotos se guardan comprimidas para que ocupen poco.</p>
+        </article>
+        <article>
+          <span class="icon">⏰</span>
+          <h3>Pospón sin culpa</h3>
+          <p>¿Ahora no puedes? Pospón 15 minutos o 2 días, o deja un tiempo de aplazamiento por defecto para cada recordatorio.</p>
+        </article>
+        <article>
+          <span class="icon">☁️</span>
+          <h3>En la nube</h3>
+          <p>Inicia sesión con Google y tus recordatorios te siguen si cambias de móvil. También se pueden consultar sin conexión.</p>
+        </article>
+      </div>
+      <p class="languages muted">Modo oscuro · Español, català, galego, euskara, English, français y Deutsch</p>
+    </section>
+
+    <section id="descargar" class="download">
+      <div class="download-card">
+        <img src="logo-mark.svg" alt="" width="72" height="72">
+        <h2>Descarga Recuérdame</h2>
+        <p>La app está en fase de pruebas y se instala directamente desde un archivo <code>.apk</code>.</p>
+        <a class="button button-light" href="https://github.com/cmaltes/recuerdame-releases/releases/latest">Descargar la última versión</a>
+        <ol class="install">
+          <li>Abre el enlace desde el móvil y descarga el archivo <code>.apk</code>.</li>
+          <li>Ábrelo. Android te pedirá permiso para <b>instalar apps de origen desconocido</b>: concédelo.</li>
+          <li>Inicia sesión con Google y acepta las notificaciones.</li>
+        </ol>
+        <p class="note">Mientras dura la fase de pruebas, tu cuenta de Google tiene que estar dada de alta como probador: pídeselo a Fernando indicando tu Gmail. Más adelante, también en Google Play.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con cariño en Cantabria por Fernando Munguía Hoyo.</p>
+    <p>
+      <a href="https://ko-fi.com/fernandomunguia">Invítame a un Ko-fi ☕</a>
+      · <a href="https://github.com/cmaltes/recuerdame-releases">GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>
