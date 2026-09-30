@@ -303,3 +303,39 @@ section { padding: 72px 16px; max-width: 1120px; margin: 0 auto; }
 
 footer { padding: 40px 16px 56px; text-align: center; color: var(--muted); border-top: 1px solid var(--border); }
 footer p { margin: 4px 0; }
+
+/* --- Changelog ---------------------------------------------------------------------- */
+
+.section-intro { text-align: center; margin: -8px 0 32px; }
+.releases { display: grid; gap: 16px; max-width: 760px; margin: 0 auto; }
+.release { padding: 24px 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.release:first-child { border-color: color-mix(in srgb, var(--primary) 50%, var(--border)); }
+.release header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.release h3 { margin: 0; }
+.release-date { color: var(--muted); font-weight: 700; font-size: 0.95rem; }
+.release ul { margin: 0; padding-left: 1.2em; }
+.release li { margin: 6px 0; }
+.release li::marker { color: var(--primary); }
+
+/* --- Ko-fi -------------------------------------------------------------------------- */
+
+.support-card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 2px dashed color-mix(in srgb, var(--primary) 45%, var(--border));
+}
+.support-card h2 { text-align: left; font-size: 1.8rem; }
+.support-card p { color: var(--muted); margin: 0 0 20px; }
+.support-icon { font-size: 3rem; line-height: 1; }
+.button-kofi { background: #ff5e5b; color: #ffffff; }
+.button-kofi:hover { background: #e94f4c; }
+
+@media (max-width: 560px) {
+  .support-card { flex-direction: column; padding: 24px; }
+}
