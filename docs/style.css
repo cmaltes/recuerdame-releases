@@ -339,3 +339,10 @@ footer p { margin: 4px 0; }
 @media (max-width: 560px) {
   .support-card { flex-direction: column; padding: 24px; }
 }
+
+/* Legal pages (privacidad.html, condiciones.html) */
+.legal { max-width: 760px; padding-top: 40px; }
+.legal h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 900; }
+.legal h2 { font-size: 1.35rem; text-align: left; margin-top: 2em; }
+.legal li { margin: 0.35em 0; }
+.legal .updated { color: var(--muted); margin-bottom: 2em; }
