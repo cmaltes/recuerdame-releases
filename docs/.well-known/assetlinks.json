@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.femuho.recuerdame",
+      "sha256_cert_fingerprints": [
+        "FE:02:31:6D:1D:8F:CD:4F:86:2D:22:06:61:DD:9A:A7:16:D9:3A:45:67:11:8F:8E:57:40:55:06:45:91:A1:08"
+      ]
+    }
+  }
+]

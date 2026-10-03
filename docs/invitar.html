@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitación · Recuérdame</title>
+  <meta name="description" content="Te han invitado a compartir recordatorios en Recuérdame.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0d9488">
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .invite-code {
+      display: inline-block; margin: 0.4em 0 0.8em; padding: 0.3em 0.8em; border-radius: 14px;
+      background: #f0fdfa; color: #0f766e; font-size: 2rem; font-weight: 900; letter-spacing: 0.18em;
+    }
+    .invite-steps li { margin: 0.5em 0; }
+  </style>
+</head>
+<body>
+  <!-- Android opens these links straight in the app (App Links); this page is only seen without it. -->
+  <header class="topbar">
+    <a class="brand" href="./">
+      <img src="logo-mark.svg" alt="" width="36" height="36">
+      <span>Recuérdame</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="legal">
+      <h1>Te han invitado a Recuérdame</h1>
+      <p>Alguien quiere compartir recordatorios contigo. Este es el código de la invitación:</p>
+      <p><span class="invite-code" id="code">——————</span></p>
+      <ol class="invite-steps">
+        <li><b>¿Ya tienes la app?</b> Ábrela, ve a <b>Amigos → Invitar amigo</b> y escribe el código en
+          «¿Te han enviado una invitación?».</li>
+        <li><b>¿No la tienes?</b> Descárgala, entra con tu cuenta de Google y escribe el código del mismo modo.</li>
+      </ol>
+      <p><a class="button" href="https://github.com/cmaltes/recuerdame-releases/releases/latest">Descargar Recuérdame</a></p>
+      <p class="updated">La invitación sirve una sola vez y caduca a los 7 días. Recuérdame es, por ahora, solo para Android.</p>
+    </section>
+  </main>
+
+  <script>
+    const code = new URLSearchParams(location.search).get('c');
+    if (code) document.getElementById('code').textContent = code.toUpperCase().replace(/[^0-9A-Z]/g, '');
+  </script>
+</body>
+</html>
