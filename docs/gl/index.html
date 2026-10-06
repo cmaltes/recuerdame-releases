@@ -1,24 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="gl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    // Send the browser to its own language, unless one was picked by hand (see the end of the page).
-    (() => {
-      const langs = ["es", "ca", "gl", "eu", "fr", "de"];
-      let lang = null;
-      try { lang = localStorage.getItem('lang'); } catch {}
-      if (!lang) lang = (navigator.languages || [navigator.language]).map((l) => (l || '').slice(0, 2).toLowerCase())
-        .find((l) => l === 'en' || langs.includes(l));
-      if (langs.includes(lang)) location.replace(lang + '/' + location.pathname.split('/').pop() + location.search + location.hash);
-    })();
-  </script>
-  <title>Recuérdame · Not when, but how often</title>
-  <meta name="description" content="Recuérdame is a reminder app for things that repeat without a fixed date: watering the plants, changing the filter, calling your friends. Mark it done and the countdown starts again.">
+  
+  <title>Recuérdame · Non é cando, é cada canto</title>
+  <meta name="description" content="Recuérdame é unha app de lembretes para as cousas que se repiten sen data fixa: regar as plantas, cambiar o filtro, chamar aos amigos. Marca que o fixeches e a conta volve comezar.">
   <meta name="theme-color" content="#0d9488">
-  <meta property="og:title" content="Recuérdame · Not when, but how often">
-  <meta property="og:description" content="Recuérdame is a reminder app for things that repeat without a fixed date: watering the plants, changing the filter, calling your friends. Mark it done and the countdown starts again.">
+  <meta property="og:title" content="Recuérdame · Non é cando, é cada canto">
+  <meta property="og:description" content="Recuérdame é unha app de lembretes para as cousas que se repiten sen data fixa: regar as plantas, cambiar o filtro, chamar aos amigos. Marca que o fixeches e a conta volve comezar.">
   <meta property="og:image" content="https://recuerdame.lamaltesa.dev/icon-512.png">
   <meta property="og:type" content="website">
   <link rel="alternate" hreflang="en" href="https://recuerdame.lamaltesa.dev/">
@@ -29,24 +19,24 @@
   <link rel="alternate" hreflang="fr" href="https://recuerdame.lamaltesa.dev/fr/">
   <link rel="alternate" hreflang="de" href="https://recuerdame.lamaltesa.dev/de/">
   <link rel="alternate" hreflang="x-default" href="https://recuerdame.lamaltesa.dev/">
-  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="../logo-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="./">
-      <img src="logo-mark.svg" alt="" width="36" height="36">
+      <img src="../logo-mark.svg" alt="" width="36" height="36">
       <span>Recuérdame</span>
     </a>
     <div class="topbar-end">
-      <nav><a href="#como-funciona">How it works</a><a href="#funciones">Features</a><a href="#novedades">What's new</a><a class="button button-small" href="#descargar">Download</a></nav>
+      <nav><a href="#como-funciona">Como funciona</a><a href="#funciones">Funcións</a><a href="#novedades">Novidades</a><a class="button button-small" href="#descargar">Descargar</a></nav>
       <details class="lang">
-        <summary aria-label="Language">🌐 EN</summary>
-        <ul><li><a href="./" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li><li><a href="es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="ca/" hreflang="ca" lang="ca" data-lang="ca">Català</a></li><li><a href="gl/" hreflang="gl" lang="gl" data-lang="gl">Galego</a></li><li><a href="eu/" hreflang="eu" lang="eu" data-lang="eu">Euskara</a></li><li><a href="fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li></ul>
+        <summary aria-label="Idioma">🌐 GL</summary>
+        <ul><li><a href="../" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../ca/" hreflang="ca" lang="ca" data-lang="ca">Català</a></li><li><a href="../gl/" hreflang="gl" lang="gl" data-lang="gl" aria-current="true">Galego</a></li><li><a href="../eu/" hreflang="eu" lang="eu" data-lang="eu">Euskara</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li></ul>
       </details>
     </div>
   </header>
@@ -54,40 +44,40 @@
   <main>
     <section class="hero">
       <div class="hero-text">
-        <p class="eyebrow">Reminders without a calendar</p>
-        <h1>Not <em>when</em>.<br>But <strong>how often</strong>.</h1>
+        <p class="eyebrow">Lembretes sen calendario</p>
+        <h1>Non é <em>cando</em>.<br>É <strong>cada canto</strong>.</h1>
         <p class="lead">
-          Some things have no date, but they do have a rhythm: watering the plants, changing the water filter,
-          checking the tyres, calling your friends. Tell Recuérdame how often you do them and it will remind you
-          when it's time again.
+          Hai cousas que non teñen data, pero si ritmo: regar as plantas, cambiar o filtro da auga,
+          revisar as rodas, chamar aos amigos. Dille a Recuérdame cada canto as fas e avisarate
+          cando volva tocar.
         </p>
         <div class="cta">
           <a class="button" href="#descargar">
-            <img src="logo-glyph.svg" alt="" width="22" height="22" class="invert">
-            Download for Android
+            <img src="../logo-glyph.svg" alt="" width="22" height="22" class="invert">
+            Descargar para Android
           </a>
-          <span class="muted">Free · No ads · Android 7.0 or later</span>
+          <span class="muted">De balde · Sen anuncios · Android 7.0 ou superior</span>
         </div>
       </div>
 
       <div class="phone" aria-hidden="true">
         <div class="screen">
-          <div class="app-bar"><span class="burger"></span>Reminders</div>
+          <div class="app-bar"><span class="burger"></span>Lembretes</div>
           <div class="card" style="--c:#16a34a">
             <span class="bubble">🪴</span>
-            <div><b>Water the plants</b><small>Today, 7:00 PM · in 2 h</small><small class="tag">↻ Every 3 days · 📍 On arriving Home</small></div>
+            <div><b>Regar as plantas</b><small>Hoxe, 19:00 · en 2 h</small><small class="tag">↻ Cada 3 días · 📍 Ao chegar á Casa</small></div>
           </div>
           <div class="card" style="--c:#2563eb">
             <span class="bubble">🚗</span>
-            <div><b>Tyre pressure</b><small>Nov 12, 10:00 AM · in 6 weeks</small><small class="tag">↻ Every 2 months</small></div>
+            <div><b>Presión das rodas</b><small>12 nov., 10:00 · en 6 semanas</small><small class="tag">↻ Cada 2 meses</small></div>
           </div>
           <div class="card" style="--c:#7c3aed">
             <span class="bubble">👵</span>
-            <div><b>Call the friends</b><small>Sunday, 12:00 PM · in 4 days</small><small class="tag">↻ Every week · 👥 Shared</small></div>
+            <div><b>Chamar aos amigos</b><small>Domingo, 12:00 · en 4 días</small><small class="tag">↻ Cada semana · 👥 Compartido</small></div>
           </div>
           <div class="card" style="--c:#0d9488">
             <span class="bubble">💧</span>
-            <div><b>Water filter</b><small>Mar 3, 9:00 AM · in 5 months</small><small class="tag">↻ Every 6 months</small></div>
+            <div><b>Filtro da auga</b><small>3 mar., 09:00 · en 5 meses</small><small class="tag">↻ Cada 6 meses</small></div>
           </div>
           <span class="fab">+</span>
         </div>
@@ -96,118 +86,118 @@
 
     <section class="compare">
       <div class="compare-card calendar">
-        <p class="label">A calendar says</p>
-        <p class="quote">“On the 1st of every month.”</p>
-        <p class="muted">Even if you did it yesterday. Even if you're two weeks late.</p>
+        <p class="label">Un calendario di</p>
+        <p class="quote">«O día 1 de cada mes.»</p>
+        <p class="muted">Aínda que o fixeses onte. Aínda que leves dúas semanas de atraso.</p>
       </div>
       <div class="compare-card interval">
-        <p class="label">Recuérdame says</p>
-        <p class="quote">“30 days after the last time.”</p>
-        <p class="muted">When you mark it done, the countdown starts again from that moment. If you snooze it, the next time moves too.</p>
+        <p class="label">Recuérdame di</p>
+        <p class="quote">«30 días despois da última vez.»</p>
+        <p class="muted">Cando o marcas como feito, a conta volve comezar desde ese momento. Se o adías, a seguinte vez tamén se atrasa.</p>
       </div>
     </section>
 
     <section id="como-funciona" class="steps">
-      <h2>How it works</h2>
+      <h2>Como funciona</h2>
       <ol>
         <li>
           <span class="step-number">1</span>
-          <h3>Tell it how often</h3>
-          <p>Every 3 days, every 2 weeks, every 6 months… in minutes, hours, days, weeks, months or years.</p>
+          <h3>Dille cada canto</h3>
+          <p>Cada 3 días, cada 2 semanas, cada 6 meses… en minutos, horas, días, semanas, meses ou anos.</p>
         </li>
         <li>
           <span class="step-number">2</span>
-          <h3>It reminds you when it's time</h3>
-          <p>A notification with <b>Done</b> and <b>Snooze</b>. Or, if you prefer, when you get home or to work.</p>
+          <h3>Avísate cando toca</h3>
+          <p>Unha notificación con <b>Feito</b> e <b>Adiar</b>. Ou, se o prefires, cando chegues á casa ou ao traballo.</p>
         </li>
         <li>
           <span class="step-number">3</span>
-          <h3>You do it, and it starts over</h3>
-          <p>Mark it done and the interval restarts from that moment. No piled-up dates, no overdue alerts.</p>
+          <h3>Fálo, e volta a empezar</h3>
+          <p>Marcas que o fixeches e o intervalo reiníciase desde ese momento. Sen datas que se acumulan nin avisos atrasados.</p>
         </li>
       </ol>
     </section>
 
     <section class="examples">
-      <h2>How often do you…?</h2>
+      <h2>Cada canto…?</h2>
       <ul class="chips">
-        <li style="--c:#16a34a">🪴 water the cacti <b>every 2 weeks</b></li>
-        <li style="--c:#0891b2">💧 change the filter <b>every 6 months</b></li>
-        <li style="--c:#ea580c">🐶 deworm the dog <b>every 3 months</b></li>
-        <li style="--c:#7c3aed">📞 call your friends <b>every week</b></li>
-        <li style="--c:#dc2626">🦷 change your toothbrush <b>every 3 months</b></li>
-        <li style="--c:#2563eb">🚗 check the tyres <b>every 2 months</b></li>
-        <li style="--c:#0d9488">🛏️ change the sheets <b>every 2 weeks</b></li>
-        <li style="--c:#ca8a04">🔥 service the boiler <b>every year</b></li>
-        <li style="--c:#db2777">🧺 hang out the washing <b>before it needs washing again</b></li>
+        <li style="--c:#16a34a">🪴 regar os cactos <b>cada 2 semanas</b></li>
+        <li style="--c:#0891b2">💧 cambiar o filtro <b>cada 6 meses</b></li>
+        <li style="--c:#ea580c">🐶 desparasitar o can <b>cada 3 meses</b></li>
+        <li style="--c:#7c3aed">📞 chamar aos amigos <b>cada semana</b></li>
+        <li style="--c:#dc2626">🦷 cambiar o cepillo <b>cada 3 meses</b></li>
+        <li style="--c:#2563eb">🚗 revisar as rodas <b>cada 2 meses</b></li>
+        <li style="--c:#0d9488">🛏️ cambiar as sabas <b>cada 2 semanas</b></li>
+        <li style="--c:#ca8a04">🔥 revisar a caldeira <b>cada ano</b></li>
+        <li style="--c:#db2777">🧺 tender a lavadora <b>antes de que haxa que lavala outra vez</b></li>
       </ul>
     </section>
 
     <section id="funciones" class="features">
-      <h2>Everything you need, nothing more</h2>
+      <h2>Todo o que necesitas, nada máis</h2>
       <div class="grid">
         <article>
           <span class="icon">📍</span>
-          <h3>When you get home</h3>
-          <p>Link a reminder to a place and it will remind you when you arrive, if it's due. It detects your home or work Wi-Fi, so it barely uses any battery.</p>
+          <h3>Ao chegar á casa</h3>
+          <p>Vincula un lembrete a un lugar e avisarate ao chegar, se xa toca. Detecta a wifi da casa ou do traballo, así que apenas gasta batería.</p>
         </article>
         <article>
           <span class="icon">👥</span>
-          <h3>Shared tasks</h3>
-          <p>Invite your partner or family with a link. Anyone can mark it done and the countdown restarts for everyone.</p>
+          <h3>Tarefas compartidas</h3>
+          <p>Convida a túa parella ou a túa familia cunha ligazón. Calquera pode marcalo como feito e a conta reiníciase para todos.</p>
         </article>
         <article>
           <span class="icon">🎨</span>
-          <h3>Colour categories</h3>
-          <p>Home, car, health, plants, pets… each with its icon and colour, in the list and in the notifications.</p>
+          <h3>Categorías con cor</h3>
+          <p>Fogar, coche, saúde, plantas, mascotas… coa súa icona e a súa cor, na lista e nas notificacións.</p>
         </article>
         <article>
           <span class="icon">📷</span>
-          <h3>Photo and location</h3>
-          <p>Attach a photo of the filter you need to buy or the address of the garage. Photos are stored compressed so they take little space.</p>
+          <h3>Foto e localización</h3>
+          <p>Achega unha foto do filtro que hai que mercar ou o enderezo do taller. As fotos gárdanse comprimidas para que ocupen pouco.</p>
         </article>
         <article>
           <span class="icon">⏰</span>
-          <h3>Snooze guilt-free</h3>
-          <p>Can't right now? Snooze for 15 minutes or 2 days. If a task keeps getting stuck, the app cheers you on and even suggests scribbling it out to let off steam.</p>
+          <h3>Adía sen culpa</h3>
+          <p>Agora non podes? Adía 15 minutos ou 2 días. Se unha tarefa se che atraganta, a app anímate e ata che propón riscala co dedo para desafogarte.</p>
         </article>
         <article>
           <span class="icon">📱</span>
           <h3>Widgets</h3>
-          <p>See on your home screen how many tasks are overdue or snoozed, and which ones.</p>
+          <p>Ten á vista na pantalla de inicio cantas tarefas tes vencidas e adiadas, e cales son.</p>
         </article>
         <article>
           <span class="icon">🎉</span>
-          <h3>Satisfying to do</h3>
-          <p>Confetti and an encouraging message when you mark something done. And the notification stays until you do it or snooze it.</p>
+          <h3>Dá gusto facelo</h3>
+          <p>Ao marcar algo como feito, confeti e unha mensaxe de ánimo. E a notificación non desaparece ata que o fas ou o adías.</p>
         </article>
         <article>
           <span class="icon">☁️</span>
-          <h3>In the cloud</h3>
-          <p>Sign in with Google or just your e-mail (no passwords: you get a code), and your reminders follow you to a new phone. You can also view them offline.</p>
+          <h3>Na nube</h3>
+          <p>Entra con Google ou só co teu correo (sen contrasinais: chégache un código), e os teus lembretes séguente se cambias de móbil. Tamén se poden consultar sen conexión.</p>
         </article>
       </div>
-      <p class="languages muted">Dark mode · English, español, català, galego, euskara, français and Deutsch</p>
+      <p class="languages muted">Modo escuro · Galego, español, català, euskara, English, français e Deutsch</p>
     </section>
 
     <section id="descargar" class="download">
       <div class="download-card">
-        <img src="logo-mark.svg" alt="" width="72" height="72">
-        <h2>Download Recuérdame</h2>
-        <p>The app is in testing and installs straight from an <code>.apk</code> file.</p>
-        <a class="button button-light" href="https://github.com/cmaltes/recuerdame-releases/releases/latest">Download the latest version</a>
+        <img src="../logo-mark.svg" alt="" width="72" height="72">
+        <h2>Descarga Recuérdame</h2>
+        <p>A app está en fase de probas e instálase directamente desde un ficheiro <code>.apk</code>.</p>
+        <a class="button button-light" href="https://github.com/cmaltes/recuerdame-releases/releases/latest">Descargar a última versión</a>
         <ol class="install">
-          <li>Open the link on your phone and download the <code>.apk</code> file.</li>
-          <li>Open it. Android will ask for permission to <b>install unknown apps</b>: allow it.</li>
-          <li>Sign in with Google or create an account with your e-mail, and allow notifications.</li>
+          <li>Abre a ligazón desde o móbil e descarga o ficheiro <code>.apk</code>.</li>
+          <li>Ábreo. Android pedirache permiso para <b>instalar apps de orixe descoñecida</b>: concédello.</li>
+          <li>Entra con Google ou crea unha conta co teu correo, e acepta as notificacións.</li>
         </ol>
-        <p class="note">You don't need a Google account: you can create one with any e-mail. Coming soon to Google Play too.</p>
+        <p class="note">Non fai falta ter conta de Google: podes crear unha con calquera correo. Máis adiante, tamén en Google Play.</p>
       </div>
     </section>
     <section id="novedades" class="changelog">
-      <h2>What's new</h2>
-      <p class="section-intro muted">What each version brings. The app lets you know when there's a new one.</p>
-      <div class="releases">
+      <h2>Novidades</h2>
+      <p class="section-intro muted">O que trae cada versión (en inglés). A app avísate cando hai unha nova.</p>
+      <div class="releases" lang="en">
         <article class="release"><header><h3>Version 1.8.0</h3><span class="release-date">in testing</span></header><ul><li><b>Ready for Google Play</b>: the app changes its internal identifier, so Android treats it as a new app. <b>Uninstall the previous version first</b> and sign in again: your reminders are in the cloud and nothing is lost. If you don&#x27;t uninstall it, you&#x27;ll have both and get every alert twice.</li><li><b>When you delete your account, your name goes too</b> from the history of reminders other people shared with you: it shows “Deleted user” instead.</li></ul></article>
 <article class="release"><header><h3>Version 1.7.0</h3><span class="release-date">Oct 5, 2026</span></header><ul><li><b>Undo</b>: when you mark something done or snooze it, the message at the top has an <b>Undo</b> button for a few seconds. If the reminder was overdue, it alerts you again.</li><li><b>History</b>: each reminder&#x27;s page shows when it was done and who did it, very handy for shared ones (“did you water them or did I?”).</li><li><b>Search</b> the list by name, description, address, category or place, without worrying about accents.</li><li><b>Snooze without asking</b>: when swiping, press and hold <b>Snooze</b> to snooze straight away for the reminder&#x27;s default time (or 10 minutes if it has none).</li><li><b>Snooze from the notification</b>: notifications have a new button with the default time (for example, <b>+10 minutes</b>) that snoozes without opening the app. The <b>Snooze…</b> button still lets you choose the time.</li><li><b>Daily summary</b> (optional): one notification a day, at the time you choose, with what you have for that day, overdue ones included. Turn it on in <b>User settings</b>, on each phone.</li><li><b>Snooze again from the list</b>: a snoozed reminder that isn&#x27;t due yet can also be snoozed again by swiping it left, like overdue ones.</li></ul></article>
 <article class="release"><header><h3>Version 1.6.0</h3><span class="release-date">Oct 5, 2026</span></header><ul><li><b>Arrival alerts, only if you want them</b>: they come turned off. Before turning them on, the app explains why it needs your location (for example, to remind you to water the plants when you get home and not at the supermarket). If you don&#x27;t turn them on, everything works the same and reminders with a place alert you at their time. Turn them on and off in <b>Places</b>. If you had already given the permission, they stay on.</li><li>Up to <b>5 suggestions a day</b> per person, with a friendly notice if you reach the limit.</li><li><b>Safer shared reminders</b>: whoever receives a shared reminder can change what to do and when, but no longer who owns it or who it&#x27;s shared with.</li><li>New iPhone icon (the app is still Android-only, for now).</li></ul></article>
@@ -226,9 +216,9 @@
       <div class="support-card">
         <span class="support-icon" aria-hidden="true">☕</span>
         <div>
-          <h2>Find it useful?</h2>
-          <p>Recuérdame is free, with no ads and no selling your data. I make it in my spare time: if it helps you not forget things, you can buy me a coffee on Ko-fi. It helps pay for the servers and keep improving it.</p>
-          <a class="button button-kofi" href="https://ko-fi.com/fernandomunguia">Buy me a Ko-fi</a>
+          <h2>Resúltache útil?</h2>
+          <p>Recuérdame é de balde, sen anuncios e sen vender os teus datos. Fágoa nos meus ratos libres: se che axuda a non esquecer as cousas, podes convidarme a un café en Ko-fi. Axúdame a pagar os servidores e a seguir mellorándoa.</p>
+          <a class="button button-kofi" href="https://ko-fi.com/fernandomunguia">Convídame a un Ko-fi</a>
         </div>
       </div>
     </section>
@@ -236,12 +226,12 @@
   </main>
 
   <footer>
-    <p>Made with love in Cantabria by Fernando Munguía Hoyo.</p>
+    <p>Feito con agarimo en Cantabria por Fernando Munguía Hoyo.</p>
     <p>
-      <a href="https://ko-fi.com/fernandomunguia">Buy me a Ko-fi ☕</a>
+      <a href="https://ko-fi.com/fernandomunguia">Convídame a un Ko-fi ☕</a>
       · <a href="https://github.com/cmaltes/recuerdame-releases">GitHub</a>
     </p>
-    <p><a href="privacidad.html">Privacy</a> · <a href="condiciones.html">Terms</a> · <a href="borrar-cuenta.html">Delete account</a></p>
+    <p><a href="privacidad.html">Privacidade</a> · <a href="condiciones.html">Condicións</a> · <a href="borrar-cuenta.html">Borrar a conta</a></p>
   </footer>
 
   <script>

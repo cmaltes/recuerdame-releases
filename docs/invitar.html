@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Invitación · Recuérdame</title>
+  <title>Te han invitado a Recuérdame · Recuérdame</title>
   <meta name="description" content="Te han invitado a compartir recordatorios en Recuérdame.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#0d9488">
@@ -32,22 +32,84 @@
 
   <main>
     <section class="legal">
-      <h1>Te han invitado a Recuérdame</h1>
-      <p>Alguien quiere compartir recordatorios contigo. Este es el código de la invitación:</p>
+      <h1 data-t="title">Te han invitado a Recuérdame</h1>
+      <p data-t="intro">Alguien quiere compartir recordatorios contigo. Este es el código de la invitación:</p>
       <p><span class="invite-code" id="code">——————</span></p>
       <ol class="invite-steps">
-        <li><b>¿Ya tienes la app?</b> Ábrela, ve a <b>Amigos → Invitar amigo</b> y escribe el código en
+        <li data-t="have"><b>¿Ya tienes la app?</b> Ábrela, ve a <b>Amigos → Invitar amigo</b> y escribe el código en
           «¿Te han enviado una invitación?».</li>
-        <li><b>¿No la tienes?</b> Descárgala, entra (con Google o con tu correo) y escribe el código del mismo modo.</li>
+        <li data-t="dontHave"><b>¿No la tienes?</b> Descárgala, entra (con Google o con tu correo) y escribe el código del mismo modo.</li>
       </ol>
-      <p><a class="button" href="https://github.com/cmaltes/recuerdame-releases/releases/latest">Descargar Recuérdame</a></p>
-      <p class="updated">La invitación sirve una sola vez y caduca a los 7 días. Recuérdame es, por ahora, solo para Android.</p>
+      <p><a class="button" href="https://github.com/cmaltes/recuerdame-releases/releases/latest" data-t="download">Descargar Recuérdame</a></p>
+      <p class="updated" data-t="note">La invitación sirve una sola vez y caduca a los 7 días. Recuérdame es, por ahora, solo para Android.</p>
     </section>
   </main>
 
   <script>
     const code = new URLSearchParams(location.search).get('c');
     if (code) document.getElementById('code').textContent = code.toUpperCase().replace(/[^0-9A-Z]/g, '');
+
+    // Same language choice as the rest of the site: picked by hand, else the browser's; Spanish is in the markup.
+    const texts = {
+      en: {
+        title: 'You\'ve been invited to Recuérdame',
+        intro: 'Someone wants to share reminders with you. This is the invitation code:',
+        have: '<b>Already have the app?</b> Open it, go to <b>Friends → Invite a friend</b> and type the code under “Did someone send you an invitation?”.',
+        dontHave: '<b>Don\'t have it?</b> Download it, sign in (with Google or your e-mail) and type the code the same way.',
+        download: 'Download Recuérdame',
+        note: 'The invitation works once and expires after 7 days. Recuérdame is, for now, Android-only.',
+      },
+      ca: {
+        title: 'T\'han convidat a Recuérdame',
+        intro: 'Algú vol compartir recordatoris amb tu. Aquest és el codi de la invitació:',
+        have: '<b>Ja tens l\'app?</b> Obre-la, ves a <b>Amics → Convida un amic</b> i escriu el codi a «T\'han enviat una invitació?».',
+        dontHave: '<b>No la tens?</b> Baixa-la, entra (amb Google o amb el teu correu) i escriu el codi de la mateixa manera.',
+        download: 'Baixa Recuérdame',
+        note: 'La invitació serveix una sola vegada i caduca als 7 dies. Recuérdame és, de moment, només per a Android.',
+      },
+      gl: {
+        title: 'Convidáronte a Recuérdame',
+        intro: 'Alguén quere compartir lembretes contigo. Este é o código da invitación:',
+        have: '<b>Xa tes a app?</b> Ábrea, vai a <b>Amigos → Convidar amigo</b> e escribe o código en «Enviáronche unha invitación?».',
+        dontHave: '<b>Non a tes?</b> Descárgaa, entra (con Google ou co teu correo) e escribe o código do mesmo xeito.',
+        download: 'Descargar Recuérdame',
+        note: 'A invitación serve unha soa vez e caduca aos 7 días. Recuérdame é, polo de agora, só para Android.',
+      },
+      eu: {
+        title: 'Recuérdamera gonbidatu zaituzte',
+        intro: 'Norbaitek oroigarriak partekatu nahi ditu zurekin. Hau da gonbidapenaren kodea:',
+        have: '<b>Baduzu aplikazioa?</b> Ireki, joan <b>Lagunak → Gonbidatu laguna</b> atalera eta idatzi kodea «Gonbidapen bat bidali dizute?» atalean.',
+        dontHave: '<b>Ez duzu?</b> Deskargatu, sartu (Googlerekin edo zure posta elektronikoarekin) eta idatzi kodea modu berean.',
+        download: 'Deskargatu Recuérdame',
+        note: 'Gonbidapenak behin bakarrik balio du eta 7 egunera iraungitzen da. Recuérdame, oraingoz, Androiderako bakarrik da.',
+      },
+      fr: {
+        title: 'Vous êtes invité sur Recuérdame',
+        intro: 'Quelqu\'un veut partager des rappels avec vous. Voici le code de l\'invitation :',
+        have: '<b>Vous avez déjà l\'app ?</b> Ouvrez-la, allez dans <b>Amis → Inviter un ami</b> et saisissez le code sous « On vous a envoyé une invitation ? ».',
+        dontHave: '<b>Vous ne l\'avez pas ?</b> Téléchargez-la, connectez-vous (avec Google ou votre e-mail) et saisissez le code de la même façon.',
+        download: 'Télécharger Recuérdame',
+        note: 'L\'invitation ne sert qu\'une fois et expire au bout de 7 jours. Recuérdame est, pour l\'instant, uniquement pour Android.',
+      },
+      de: {
+        title: 'Du wurdest zu Recuérdame eingeladen',
+        intro: 'Jemand möchte Erinnerungen mit dir teilen. Das ist der Einladungscode:',
+        have: '<b>Du hast die App schon?</b> Öffne sie, geh zu <b>Freunde → Freund einladen</b> und gib den Code unter „Hat dir jemand eine Einladung geschickt?“ ein.',
+        dontHave: '<b>Du hast sie noch nicht?</b> Lade sie herunter, melde dich an (mit Google oder deiner E-Mail) und gib den Code genauso ein.',
+        download: 'Recuérdame herunterladen',
+        note: 'Die Einladung gilt nur einmal und läuft nach 7 Tagen ab. Recuérdame gibt es vorerst nur für Android.',
+      },
+    };
+    let lang = null;
+    try { lang = localStorage.getItem('lang'); } catch {}
+    if (!lang) lang = (navigator.languages || [navigator.language]).map((l) => (l || '').slice(0, 2).toLowerCase())
+      .find((l) => l === 'es' || l in texts);
+    if (!lang || !(lang === 'es' || lang in texts)) lang = 'en';
+    if (texts[lang]) {
+      document.documentElement.lang = lang;
+      document.title = texts[lang].title + ' · Recuérdame';
+      document.querySelectorAll('[data-t]').forEach((el) => { el.innerHTML = texts[lang][el.dataset.t]; });
+    }
   </script>
 </body>
 </html>

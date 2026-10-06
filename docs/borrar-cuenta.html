@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Send the browser to its own language, unless one was picked by hand (see the end of the page).
+    (() => {
+      const langs = ["es", "ca", "gl", "eu", "fr", "de"];
+      let lang = null;
+      try { lang = localStorage.getItem('lang'); } catch {}
+      if (!lang) lang = (navigator.languages || [navigator.language]).map((l) => (l || '').slice(0, 2).toLowerCase())
+        .find((l) => l === 'en' || langs.includes(l));
+      if (langs.includes(lang)) location.replace(lang + '/' + location.pathname.split('/').pop() + location.search + location.hash);
+    })();
+  </script>
+  <title>Delete your account · Recuérdame</title>
+  <meta name="description" content="How to delete your Recuérdame account and all your data, from the app or by e-mail.">
+  <meta name="theme-color" content="#0d9488">
+  <meta property="og:title" content="Delete your account · Recuérdame">
+  <meta property="og:description" content="How to delete your Recuérdame account and all your data, from the app or by e-mail.">
+  <meta property="og:image" content="https://recuerdame.lamaltesa.dev/icon-512.png">
+  <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://recuerdame.lamaltesa.dev/borrar-cuenta.html">
+  <link rel="alternate" hreflang="es" href="https://recuerdame.lamaltesa.dev/es/borrar-cuenta.html">
+  <link rel="alternate" hreflang="ca" href="https://recuerdame.lamaltesa.dev/ca/borrar-cuenta.html">
+  <link rel="alternate" hreflang="gl" href="https://recuerdame.lamaltesa.dev/gl/borrar-cuenta.html">
+  <link rel="alternate" hreflang="eu" href="https://recuerdame.lamaltesa.dev/eu/borrar-cuenta.html">
+  <link rel="alternate" hreflang="fr" href="https://recuerdame.lamaltesa.dev/fr/borrar-cuenta.html">
+  <link rel="alternate" hreflang="de" href="https://recuerdame.lamaltesa.dev/de/borrar-cuenta.html">
+  <link rel="alternate" hreflang="x-default" href="https://recuerdame.lamaltesa.dev/borrar-cuenta.html">
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">
+      <img src="logo-mark.svg" alt="" width="36" height="36">
+      <span>Recuérdame</span>
+    </a>
+    <div class="topbar-end">
+      
+      <details class="lang">
+        <summary aria-label="Language">🌐 EN</summary>
+        <ul><li><a href="borrar-cuenta.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li><li><a href="es/borrar-cuenta.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="ca/borrar-cuenta.html" hreflang="ca" lang="ca" data-lang="ca">Català</a></li><li><a href="gl/borrar-cuenta.html" hreflang="gl" lang="gl" data-lang="gl">Galego</a></li><li><a href="eu/borrar-cuenta.html" hreflang="eu" lang="eu" data-lang="eu">Euskara</a></li><li><a href="fr/borrar-cuenta.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="de/borrar-cuenta.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal">
+      <h1>Delete your account</h1>
+      <p class="updated">Recuérdame, by Fernando Munguía Hoyo · Last updated: 6 October 2026</p>
+
+      <p>You can delete your Recuérdame account and all your data whenever you want, in two ways.</p>
+
+      <h2>From the app</h2>
+      <ol>
+        <li>Open Recuérdame and sign in.</li>
+        <li>Open the side menu and tap <b>User settings</b>.</li>
+        <li>Tap <b>Delete account</b> and confirm.</li>
+      </ol>
+      <p>It is deleted right away and you are signed out.</p>
+
+      <h2>Without the app, by e-mail</h2>
+      <p>If you no longer have the app installed, write to
+      <a href="mailto:info@lamaltesa.dev?subject=Delete%20my%20Recu%C3%A9rdame%20account">info@lamaltesa.dev</a>
+      from the address you sign in to Recuérdame with, with the subject “Delete my account”. Your account and your data
+      will be deleted within 30 days at most, and you will get a reply when it is done.</p>
+
+      <h2>What is deleted</h2>
+      <ul>
+        <li>Your account: name, e-mail address and user identifier.</li>
+        <li>Your reminders, with their photos, addresses and history. The ones you shared with other people disappear
+          for them too.</li>
+        <li>Your categories and places (name, Wi-Fi network, location and radius).</li>
+        <li>Your friends, requests and invitation links, and your devices' notification identifiers.</li>
+      </ul>
+
+      <h2>What is kept</h2>
+      <ul>
+        <li>In reminders other people shared with you, the history still shows when it was done, but says “Deleted
+          user” instead of your name.</li>
+        <li>Suggestions you sent, published on GitHub without your name or e-mail. They are removed on request.</li>
+      </ul>
+      <p>No copies of your data are kept after deleting it.</p>
+
+      <p>More information in the <a href="privacidad.html">privacy policy</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with love in Cantabria by Fernando Munguía Hoyo.</p>
+    <p>
+      <a href="https://ko-fi.com/fernandomunguia">Buy me a Ko-fi ☕</a>
+      · <a href="https://github.com/cmaltes/recuerdame-releases">GitHub</a>
+    </p>
+    <p><a href="privacidad.html">Privacy</a> · <a href="condiciones.html">Terms</a> · <a href="borrar-cuenta.html">Delete account</a></p>
+  </footer>
+
+  <script>
+    // A language picked by hand wins over the browser's one from then on.
+    document.querySelectorAll('[data-lang]').forEach((link) =>
+      link.addEventListener('click', () => {
+        try { localStorage.setItem('lang', link.dataset.lang); } catch {}
+      }),
+    );
+  </script>
+</body>
+</html>

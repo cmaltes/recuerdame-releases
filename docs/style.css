@@ -98,6 +98,42 @@ section { padding: 72px 16px; max-width: 1120px; margin: 0 auto; }
   .topbar nav a:not(.button) { display: none; }
 }
 
+.topbar-end { display: flex; align-items: center; gap: 16px; }
+@media (max-width: 480px) {
+  /* The hero's own download button is right below. */
+  .topbar nav { display: none; }
+}
+
+/* Language picker: a <details> so it also works without JavaScript. */
+.lang { position: relative; }
+.lang summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 800;
+  white-space: nowrap;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary:hover, .lang[open] summary { color: var(--text); background: var(--primary-soft); }
+.lang ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  min-width: 150px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.lang li a { display: block; padding: 8px 12px; border-radius: 10px; color: var(--text); text-decoration: none; font-weight: 700; }
+.lang li a:hover { background: var(--primary-soft); }
+.lang li a[aria-current] { color: var(--primary-strong); }
+
 /* --- Buttons ------------------------------------------------------------------------ */
 
 .button {
@@ -340,7 +376,7 @@ footer p { margin: 4px 0; }
   .support-card { flex-direction: column; padding: 24px; }
 }
 
-/* Legal pages (privacidad.html, condiciones.html) */
+/* Legal pages (privacidad, condiciones, borrar-cuenta) */
 .legal { max-width: 760px; padding-top: 40px; }
 .legal h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 900; }
 .legal h2 { font-size: 1.35rem; text-align: left; margin-top: 2em; }
